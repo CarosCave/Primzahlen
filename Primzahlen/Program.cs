@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 int primZahlStart = 1;
-int primZahlEnde = 1000;
+int primZahlEnde = 100000;
 int tempZähler = 0;
 
 int aktuellZuPrüfendeZahl = primZahlStart;
@@ -31,3 +31,19 @@ stopWatch.Stop();
 
 Console.WriteLine();
 Console.WriteLine(stopWatch.Elapsed);
+
+
+
+
+bool IstPrimzahl(int zuPrüfendeZahl)
+{
+    for (int i = 1; i <= zuPrüfendeZahl; i++)
+    {
+        if (zuPrüfendeZahl%i !=0)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
