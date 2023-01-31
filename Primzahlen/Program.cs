@@ -21,6 +21,11 @@ for (int i = 0; i < primZahlEnde; i++)
         }  
     }
 
+    if (i % 20000 == 0)
+    {
+        Console.Write(".");
+    }
+    
     if (tempZähler == 1 || tempZähler == 2)
     {
         //Console.Write(aktuellZuPrüfendeZahl + ", ");
@@ -29,6 +34,7 @@ for (int i = 0; i < primZahlEnde; i++)
     tempZähler = 0;
 }
 
+Console.WriteLine();
 Console.WriteLine("Ende For-Schleife");
 stopWatch.Stop();
 
@@ -48,11 +54,15 @@ for (int i = 1; i < primZahlEnde; i++)
     {
         //Console.Write(i + ", ");
     }
+    if (i % 20000 == 0)
+    {
+        Console.Write(".");
+    }
 }
 stopWatch.Stop();
 
 TimeSpan timeFunc = stopWatch.Elapsed;
-
+Console.WriteLine();
 Console.WriteLine("Ende Funktionsschleife");
 Console.WriteLine();
 Console.WriteLine("For Schleife: \t\t" + timeFor);
